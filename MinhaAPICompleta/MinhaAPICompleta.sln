@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIO.Business", "src\DevIO.Business\DevIO.Business.csproj", "{968C2894-BF32-48B1-AF98-E17A82C45438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIO.Data", "src\DevIO.Data\DevIO.Data.csproj", "{14D0BA27-22AD-43A8-8808-7BF03D99C1BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIO.Api", "DevIO.Api\DevIO.Api.csproj", "{2FA998BB-0942-4DAE-B896-2E52F673E789}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{968C2894-BF32-48B1-AF98-E17A82C45438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{968C2894-BF32-48B1-AF98-E17A82C45438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{968C2894-BF32-48B1-AF98-E17A82C45438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{968C2894-BF32-48B1-AF98-E17A82C45438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D0BA27-22AD-43A8-8808-7BF03D99C1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D0BA27-22AD-43A8-8808-7BF03D99C1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D0BA27-22AD-43A8-8808-7BF03D99C1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D0BA27-22AD-43A8-8808-7BF03D99C1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA998BB-0942-4DAE-B896-2E52F673E789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA998BB-0942-4DAE-B896-2E52F673E789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA998BB-0942-4DAE-B896-2E52F673E789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA998BB-0942-4DAE-B896-2E52F673E789}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
