@@ -53,7 +53,7 @@ public class ProdutosController : MainController
 
         produtoViewModel.Imagem = imagemNome;
         await _produtoService.Adicionar(_mapper.Map<Produto>(produtoViewModel));
-
+        
         return CustomResponse(produtoViewModel);
     }
 
@@ -79,7 +79,7 @@ public class ProdutosController : MainController
             return false;
         }
 
-        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imagens", imgNome);
+        var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/app/demo-webapi/src/assets", imgNome);
 
         if (System.IO.File.Exists(filePath))
         {
