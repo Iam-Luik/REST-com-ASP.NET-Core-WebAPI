@@ -2,10 +2,12 @@
 using DevIO.Api.ViewModels;
 using DevIO.Business.Intefaces;
 using DevIO.Business.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DevIO.Api.Controllers;
 
+[Authorize]
 [Route("api/fornecedores")]
 public class FornecedoresController : MainController
 {
@@ -24,6 +26,7 @@ public class FornecedoresController : MainController
         _enderecoRepository = enderecoRepository;
     }
 
+    [AllowAnonymous]
     public async Task<IEnumerable<FornecedorViewModel>> ObterTodos()
     {
         var fornecedor = _mapper.Map<IEnumerable<FornecedorViewModel>>(await _fornecedorRepository.ObterTodos());
