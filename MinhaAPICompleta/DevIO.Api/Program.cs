@@ -14,6 +14,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddIdentityConfiguration(builder.Configuration);
 
+builder.Services.AddAuthentication();
+
 builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.Configure<ApiBehaviorOptions>(options => { options.SuppressModelStateInvalidFilter = true; });

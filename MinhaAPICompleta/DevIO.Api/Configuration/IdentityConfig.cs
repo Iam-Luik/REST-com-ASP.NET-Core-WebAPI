@@ -20,6 +20,7 @@ public static class IdentityConfig
         services.AddDefaultIdentity<IdentityUser>()
             .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddErrorDescriber<IdentityMensagensPortugues>()
             .AddDefaultTokenProviders();
         
         return services;

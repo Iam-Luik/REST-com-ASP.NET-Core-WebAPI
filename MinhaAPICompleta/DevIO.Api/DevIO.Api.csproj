@@ -27,4 +27,74 @@
       <ProjectReference Include="..\src\DevIO.Data\DevIO.Data.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="wwwroot\app\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="wwwroot\app\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="wwwroot\app\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="wwwroot\app\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\.editorconfig" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\.gitignore" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\angular.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\e2e\protractor.conf.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\e2e\src\app.e2e-spec.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\e2e\src\app.po.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\e2e\tsconfig.e2e.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\package-lock.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\package.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\README.md" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\app-routing.module.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\app.component.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\app.component.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\app.module.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\base\baseService.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\base\menu\menu.component.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\base\menu\menu.component.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\produtos\cadastro\cadastro.component.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\produtos\cadastro\cadastro.component.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\produtos\lista\lista.component.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\produtos\lista\lista.component.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\produtos\models\Fornecedor.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\produtos\models\Produto.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\produtos\services\produtoService.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\user\login\login.component.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\user\login\login.component.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\user\menu\menu.user.component.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\user\menu\menu.user.component.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\user\user.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\app\user\userService.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\assets\26dc1b09-bb40-4e31-a663-624b72bc2fd2_harry.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\assets\f6eba39c-e47e-4758-8ae2-400765aa4d6a_harry.jpg" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\browserslist" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\environments\environment.prod.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\environments\environment.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\favicon.ico" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\index.html" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\karma.conf.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\main.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\polyfills.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\styles.css" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\test.ts" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\tsconfig.app.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\tsconfig.spec.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\src\tslint.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="wwwroot\app\demo-webapi\tslint.json" />
+    </ItemGroup>
+
 </Project>
