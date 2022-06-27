@@ -17,7 +17,8 @@ public class ProdutosController : MainController
     public ProdutosController(INotificador notificador,
         IProdutoRepository produtoRepository,
         IProdutoService produtoService,
-        IMapper mapper) : base(notificador)
+        IMapper mapper,
+        IUser user) : base(notificador, user)
     {
         _produtoRepository = produtoRepository;
         _produtoService = produtoService;
@@ -39,7 +40,7 @@ public class ProdutosController : MainController
 
         return produtoViewModel;
     }
-    
+
     [ClaimsAuthorize("Produto", "Adicionar")]
     [HttpPost]
     public async Task<ActionResult<ProdutoViewModel>> Adicionar(ProdutoViewModel produtoViewModel)
@@ -58,7 +59,7 @@ public class ProdutosController : MainController
 
         return CustomResponse(produtoViewModel);
     }
-    
+
     [ClaimsAuthorize("Produto", "Atualizar")]
     [HttpPut("{id:guid}")]
     public async Task<ActionResult<FornecedorViewModel>> Atualizar(Guid id, ProdutoViewModel produtoViewModel)
@@ -95,10 +96,10 @@ public class ProdutosController : MainController
         return CustomResponse(produtoViewModel);
     }
 
-    
+
     [HttpPost("adicionar")]
     public async Task<ActionResult<ProdutoViewModel>> AdicionarAlternativo(
-        [ModelBinder(BinderType = typeof(ProdutoModelBinder))] 
+        [ModelBinder(BinderType = typeof(ProdutoModelBinder))]
         ProdutoImagemViewModel produtoViewModel)
     {
         if (!ModelState.IsValid) return CustomResponse(ModelState);

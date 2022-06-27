@@ -17,9 +17,12 @@ public class FornecedoresController : MainController
     private readonly IEnderecoRepository _enderecoRepository;
     private readonly IMapper _mapper;
 
-    public FornecedoresController(IFornecedorRepository fornecedorRepository, IMapper mapper,
-        IFornecedorService fornecedorService, INotificador notificador, IEnderecoRepository enderecoRepository) :
-        base(notificador)
+    public FornecedoresController(IFornecedorRepository fornecedorRepository,
+        IMapper mapper,
+        IFornecedorService fornecedorService,
+        INotificador notificador,
+        IEnderecoRepository enderecoRepository,
+        IUser user) : base(notificador, user)
     {
         _fornecedorRepository = fornecedorRepository;
         _mapper = mapper;
@@ -49,6 +52,8 @@ public class FornecedoresController : MainController
     [HttpPost]
     public async Task<ActionResult<FornecedorViewModel>> Adicionar(FornecedorViewModel fornecedorViewModel)
     {
+        
+        
         if (!ModelState.IsValid) return CustomResponse(ModelState);
 
         await _fornecedorService.Adicionar(_mapper.Map<Fornecedor>(fornecedorViewModel));
@@ -102,7 +107,7 @@ public class FornecedoresController : MainController
         }
 
         if (!ModelState.IsValid) return CustomResponse(ModelState);
-        
+
         await _fornecedorService.AtualizarEndereco(_mapper.Map<Endereco>(enderecoViewModel));
 
         return CustomResponse(enderecoViewModel);
