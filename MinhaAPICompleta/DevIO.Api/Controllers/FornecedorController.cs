@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using DevIO.Api.Extensions;
 using DevIO.Api.ViewModels;
 using DevIO.Business.Intefaces;
 using DevIO.Business.Models;
@@ -44,7 +45,7 @@ public class FornecedoresController : MainController
         return fornecedor;
     }
 
-
+    [ClaimsAuthorize("Fornecedor", "Adicionar")]
     [HttpPost]
     public async Task<ActionResult<FornecedorViewModel>> Adicionar(FornecedorViewModel fornecedorViewModel)
     {
@@ -55,6 +56,7 @@ public class FornecedoresController : MainController
         return CustomResponse(fornecedorViewModel);
     }
 
+    [ClaimsAuthorize("Fornecedor", "Atualizar")]
     [HttpPut("{id:guid}")]
     public async Task<ActionResult<FornecedorViewModel>> Atualizar(Guid id, FornecedorViewModel fornecedorViewModel)
     {
@@ -71,6 +73,7 @@ public class FornecedoresController : MainController
         return CustomResponse(fornecedorViewModel);
     }
 
+    [ClaimsAuthorize("Fornecedor", "Excluir")]
     [HttpDelete("{id:guid}")]
     public async Task<ActionResult<FornecedorViewModel>> Excluir(Guid id)
     {
