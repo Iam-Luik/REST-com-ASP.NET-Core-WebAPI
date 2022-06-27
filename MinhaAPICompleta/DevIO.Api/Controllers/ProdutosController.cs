@@ -96,7 +96,6 @@ public class ProdutosController : MainController
     }
 
     
-    [ClaimsAuthorize("Produto", "adicionar")]
     [HttpPost("adicionar")]
     public async Task<ActionResult<ProdutoViewModel>> AdicionarAlternativo(
         [ModelBinder(BinderType = typeof(ProdutoModelBinder))] 
@@ -123,6 +122,7 @@ public class ProdutosController : MainController
         return Ok(file);
     }
 
+    [ClaimsAuthorize("Produto", "Excluir")]
     [HttpDelete("{id:guid}")]
     public async Task<ActionResult<ProdutoViewModel>> Excluir(Guid id)
     {
