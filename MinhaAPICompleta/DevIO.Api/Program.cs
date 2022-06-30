@@ -39,7 +39,15 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    
 }
+else
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
 
 app.UseCors(c =>
 {
@@ -48,9 +56,10 @@ app.UseCors(c =>
     c.AllowAnyOrigin();
 });
 
-app.UseAuthentication();
 
-app.UseHttpsRedirection();
+
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
